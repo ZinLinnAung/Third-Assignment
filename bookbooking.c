@@ -88,10 +88,13 @@ void BookNames(i)
         case 9:
             printf("book ID : %d ,bookname:  The Art of Computer Programming\n",BookID[i]);
              break;
+        default:
+            printf("book not found");
         }
 }
 void SearchBook()
 {
+    printf("==========Search Book===========\n");
 int searchID;
 printf("Enter BookID :");
 scanf("%d",&searchID);
@@ -106,11 +109,12 @@ for(int i=0;i<10;i++)
 }
 void Order()
 {
+
     int BookIDno;
 
 
     int ans;
-
+    printf("==============Order Book===============\n");
     printf("Enter BookID :");
     scanf("%d",&BookIDno);
     int* bookaddress=&BookIDno;
@@ -126,12 +130,14 @@ void Order()
              {
                  printf("your ordered books \n");
                  BookNames(i);
-                 printf("order completed");
+                 printf("order completed\n");
+                 break;
              }
              else if(ans==2)
              {
 
-
+                printf("thanks for using booking system\n");
+                break;
              }
 
 
